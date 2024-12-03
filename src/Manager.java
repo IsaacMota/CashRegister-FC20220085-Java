@@ -19,7 +19,7 @@ public class Manager {
         boolean inOperation = true;
 
         while (inOperation) {
-            System.out.println("\nMenu Principal:");
+            System.out.println("\nMenu Principal:"); //
             System.out.println("1. Registrar Produto");
             System.out.println("2. Remover Produto");
             System.out.println("3. Pesquisar Produto");

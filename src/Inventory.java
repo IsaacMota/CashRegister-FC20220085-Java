@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Inventory {
-    private Map<String, Product> products = new HashMap<>();
+    private Map<String, Product> products = new HashMap<>(); // Armazena produtos com código como chave
 
     // Adiciona um produto ao inventário
     public void addProduct(Product product) {
@@ -12,12 +12,13 @@ public class Inventory {
 
     // Pesquisa um produto pelo nome
     public Product searchProductByName(String name) {
+        // Itera pelos produtos para encontrar pelo nome (ignora maiúsculas/minúsculas)
         for (Product p : products.values()) {
             if (p.getName().equalsIgnoreCase(name)) {
                 return p;
             }
         }
-        return null;
+        return null; // Retorna null se não encontrado
     }
 
     // Remove um produto do inventário
